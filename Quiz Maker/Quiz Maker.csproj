@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CD534ACC-8ADE-47D0-B4F3-32F176FD36E5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Quiz_Maker</RootNamespace>
+    <AssemblyName>Quiz Maker</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin">
+      <HintPath>..\..\Users\Bryan Jay\Downloads\HIS\HIS\bin\Debug\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework">
+      <HintPath>..\..\Users\Bryan Jay\Downloads\HIS\HIS\bin\Debug\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\Users\Bryan Jay\Downloads\MY SYSTEM PROGRAM\Extension\Extension for Visual Studio\MS Excel\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Database\DBConnection.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Create Quiz application.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Create Quiz application.Designer.cs">
+      <DependentUpon>Create Quiz application.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Exit application.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Exit application.Designer.cs">
+      <DependentUpon>Exit application.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Login application.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Login application.Designer.cs">
+      <DependentUpon>Login application.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\My Account application.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\My Account application.Designer.cs">
+      <DependentUpon>My Account application.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Play Quiz application.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Play Quiz application.Designer.cs">
+      <DependentUpon>Play Quiz application.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\registration application.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\registration application.Designer.cs">
+      <DependentUpon>registration application.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Show Quiz List application.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Show Quiz List application.Designer.cs">
+      <DependentUpon>Show Quiz List application.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login Form.Designer.cs">
+      <DependentUpon>Login Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Create Quiz application.resx">
+      <DependentUpon>Create Quiz application.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Exit application.resx">
+      <DependentUpon>Exit application.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Login application.resx">
+      <DependentUpon>Login application.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\My Account application.resx">
+      <DependentUpon>My Account application.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Play Quiz application.resx">
+      <DependentUpon>Play Quiz application.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\registration application.resx">
+      <DependentUpon>registration application.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Show Quiz List application.resx">
+      <DependentUpon>Show Quiz List application.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login Form.resx">
+      <DependentUpon>Login Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Avatar\Avatar1.png" />
+    <Content Include="Avatar\Avatar2.png" />
+    <Content Include="Avatar\Avatar3.png" />
+    <Content Include="Avatar\Avatar4.png" />
+    <Content Include="Avatar\Avatar5.png" />
+    <Content Include="Avatar\Avatar6.png" />
+    <Content Include="Avatar\Avatar7.png" />
+    <Content Include="Avatar\Avatar8.png" />
+    <Content Include="Avatar\Avatar9.png" />
+    <Content Include="Avatar\user.png" />
+    <Content Include="B-Pro-Quiz Maker\Images\BRYAN.png" />
+    <Content Include="B-Pro-Quiz Maker\Images\DEFAULT.png" />
+    <Content Include="B-Pro-Quiz Maker\Show and Hide Password\EyeHide.png" />
+    <Content Include="B-Pro-Quiz Maker\Show and Hide Password\EyeShow.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
